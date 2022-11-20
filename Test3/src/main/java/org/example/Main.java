@@ -22,7 +22,7 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.out.println("?????????? ?????? ???? 2");
+            System.out.println("Аргументов должно быть 2");
             return;
         }
         try (FileReader fileReader = new FileReader(args[0]);
@@ -38,7 +38,7 @@ public class Main {
             putIn(map, tests.getTests());
             gson.toJson(tests, writer);
         } catch (JsonIOException | JsonSyntaxException | NullPointerException | IOException e) {
-            System.out.println("???????????? ??????? ??????\n" + e);
+            System.out.println("Некорректные входные данные\n" + e);
         }
     }
 
